@@ -1,0 +1,31 @@
+@use '../general/variables' as *;
+
+#trucks {
+  section {
+    > img {
+      @include minLaptop {
+        @include tamanioImagen(100%, 500px);
+      }
+
+      @include maxLaptop {
+        @include tamanioImagen(100%, 400px);
+      }
+
+      @include maxTablet {
+        @include tamanioImagen(100%, 350px);
+      }
+    }
+
+    .card {
+      img {
+        transition: $transition;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

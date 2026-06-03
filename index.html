@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,35 +27,87 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
     <header>
-      <nav>
-        <a id="logo" href="/index.html">
-          <img src="./assets/logo.svg" alt="Logo de Volvo Trucks" />
-        </a>
-        <ul>
-          <li><a href="pages/camiones.html">Camiones</a></li>
-          <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
-          <li><a href="pages/noticias.html">Noticias</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container-fluid p-0">
+          <a id="logo" class="navbar-brand" href="./index.html">
+            <img src="./assets/logo.svg" alt="Logo de Volvo Trucks" />
+          </a>
+
+          <button
+            id="btnMobileMenu"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <a class="offcanvas-brand" href="./index.html">
+                <img src="./assets/logo.svg" alt="Logo de Volvo Trucks" />
+              </a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body justify-content-end">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="./pages/camiones.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Camiones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FH16 Aero</a>
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FH Aero</a>
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FH16</a>
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FH</a>
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FMX</a>
+                    <a class="dropdown-item" href="./pages/camiones.html">Volvo FM</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/nosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section id="portada">
+    <main id="home">
+      <section id="hero" data-aos="fade-in" data-aos-duration="1000">
         <img src="./assets/portada.png" alt="Portada de Volvo Trucks" />
         <div class="overlay">
           <h2>Diseñado con propósito</h2>
           <p>Impulsa tu negocio con la innovadora mecánica de los camiones Volvo</p>
+          <a class="button outline-light" href="./pages/nosotros.html">Conocé más</a>
         </div>
       </section>
 
-      <section id="informacion">
-        <div class="column">
+      <section id="information">
+        <div class="column" data-aos="fade-up" data-aos-delay="300">
           <div class="overlay light">
             <h3>Soluciones de transporte que se ajustan a su negocio</h3>
             <p>
@@ -63,11 +117,11 @@
           </div>
         </div>
 
-        <div class="column">
+        <div class="column" data-aos="fade-up" data-aos-delay="600">
           <img src="./assets/imagen-2.png" alt="Soluciones de transporte Volvo Trucks" />
         </div>
 
-        <div class="column">
+        <div class="column" data-aos="fade-up" data-aos-delay="300">
           <img src="./assets/imagen-1.png" alt="Portada de Volvo Trucks" />
           <div class="overlay">
             <h3>Camiones</h3>
@@ -76,7 +130,7 @@
           </div>
         </div>
 
-        <div class="column">
+        <div class="column" data-aos="fade-up" data-aos-delay="600">
           <img src="./assets/imagen-3.png" alt="Portada de Volvo Trucks" />
           <div class="overlay">
             <h3>Noticias</h3>
@@ -96,5 +150,10 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

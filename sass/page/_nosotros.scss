@@ -1,0 +1,19 @@
+@use '../general/variables' as *;
+
+#about {
+  section {
+    > img {
+      @include minLaptop {
+        @include tamanioImagen(100%, 500px);
+      }
+
+      @include maxLaptop {
+        @include tamanioImagen(100%, 400px);
+      }
+
+      @include maxTablet {
+        @include tamanioImagen(100%, 350px);
+      }
+    }
+  }
+}

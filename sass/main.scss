@@ -1,0 +1,11 @@
+@use './general/variables';
+
+@use './general/reset';
+@use './general/header';
+@use './general/footer';
+
+@use './page/index';
+@use './page/camiones';
+@use './page/contacto';
+@use './page/nosotros';
+@use './page/noticias';

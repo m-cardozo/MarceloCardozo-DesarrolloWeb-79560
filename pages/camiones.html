@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Conocé los diferentes camiones de nuestra marca y la innovación que ofrece cada modelo"
+      content="Conocé los diferentes camiones de la marca Volvo y la innovación que ofrece cada modelo"
     />
     <title>Volvo Trucks - Camiones</title>
 
@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,83 +27,176 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
   <body>
     <header>
-      <nav>
-        <a id="logo" href="../index.html">
-          <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
-        </a>
-        <ul>
-          <li><a href="../pages/camiones.html">Camiones</a></li>
-          <li><a href="../pages/nosotros.html">Sobre nosotros</a></li>
-          <li><a href="../pages/noticias.html">Noticias</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container-fluid p-0">
+          <a id="logo" class="navbar-brand" href="../index.html">
+            <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
+          </a>
+
+          <button
+            id="btnMobileMenu"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <a class="offcanvas-brand" href="../index.html">
+                <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
+              </a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body justify-content-end">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown active">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="./camiones.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Camiones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH16 Aero</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH Aero</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH16</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FMX</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FM</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section id="camiones">
-        <img src="../assets/imagen-4.png" alt="Portada de Volvo Trucks" />
+    <main id="trucks">
+      <section>
+        <img src="../assets/imagen-4.png" alt="Portada de Volvo Trucks" data-aos="fade-in" data-aos-duration="1000" />
 
-        <div class="container mt-5">
-          <h1 class="text-center">Explore toda la gama de Volvo Trucks</h1>
-          <p class="text-center mb-5">
-            Con una amplia gama de modelos, hay un camión Volvo que se adapta a su negocio. Conózcalos todos aquí.
+        <div class="container mt-5 mb-5">
+          <h1 class="text-center" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+            Explore nuestros camiones
+          </h1>
+          <p class="text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            Conozca nuestros camiones y cómo podemos adaptarlos a sus necesidades. Tanto si se dedica a la logística de
+            largo recorrido, la construcción o a cualquier otro sector, aquí encontrará su próximo camión. Observe de
+            cerca los motores, los chasis y las cabinas, y profundice en los detalles.
           </p>
 
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="../assets/volvo-fmx.png" class="card-img-top" alt="Volvo FMX" />
+          <div class="row row-cols-1 row-cols-md-2 g-5 mt-5">
+            <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fh16-aero.png" class="card-img rounded-0" alt="Volvo FH16 Aero" />
                 <div class="card-body">
-                  <h5 class="card-title">Volvo FMX</h5>
+                  <h4 class="card-title">Volvo FH16 Aero</h4>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card’s content.
+                    <b>Transporte de gran tonelaje eficiente</b><br />
+                    El Volvo FH16 Aero, con su diseño aerodinámico junto con la cadena cinemática D17, tiene la forma y
+                    la potencia necesarias para aumentar la productividad.
                   </p>
-                  <a class="button outline-dark" href="../pages/contacto.html">Conoce más</a>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
                 </div>
               </div>
             </div>
 
-            <div class="col">
-              <div class="card h-100">
-                <img src="../assets/volvo-fm.png" class="card-img-top" alt="Volvo FM" />
+            <div class="col" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fh-aero.png" class="card-img rounded-0" alt="Volvo FH Aero" />
                 <div class="card-body">
-                  <h5 class="card-title">Volvo FM</h5>
+                  <h4 class="card-title">Volvo FH Aero</h4>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card’s content.
+                    <b>Aerodinámica para larga distancia</b><br />
+                    El Volvo FH Aero es el camión ideal para recorridos de larga distancia. La forma de su cabina
+                    aerodinámica se ha diseñado para ahorrar energía y reducir su huella de CO2.
                   </p>
-                  <a class="button outline-dark" href="../pages/contacto.html">Conoce más</a>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
                 </div>
               </div>
             </div>
 
-            <div class="col">
-              <div class="card h-100">
-                <img src="../assets/volvo-fh.png" class="card-img-top" alt="Volvo FH" />
+            <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fh16.png" class="card-img rounded-0" alt="Volvo FH16" />
                 <div class="card-body">
-                  <h5 class="card-title">Volvo FH</h5>
+                  <h4 class="card-title">Volvo FH16</h4>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card’s content.
+                    <b>Desarrollado para el transporte pesado</b><br />
+                    El Volvo FH16 realiza tareas que otros camiones no pueden. La cadena cinemática D17 y la comodidad
+                    están a la altura de sus habilidades de experto.
                   </p>
-                  <a class="button outline-dark" href="../pages/contacto.html">Conoce más</a>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
                 </div>
               </div>
             </div>
 
-            <div class="col">
-              <div class="card h-100">
-                <img src="../assets/volvo-fh16.png" class="card-img-top" alt="Volvo FH 16" />
+            <div class="col" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fh.png" class="card-img rounded-0" alt="Volvo FH" />
                 <div class="card-body">
-                  <h5 class="card-title">Volvo FH 16</h5>
+                  <h4 class="card-title">Volvo FH</h4>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card’s content.
+                    <b>El icono original para larga distancia</b><br />
+                    Las rutas largas en el Volvo FH son tiempo de calidad. El icono original de las largas distancias
+                    que le mantiene seguro y cómodo en los tramos más largos.
                   </p>
-                  <a class="button outline-dark" href="../pages/contacto.html">Conoce más</a>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fmx.png" class="card-img rounded-0" alt="Volvo FMX" />
+                <div class="card-body">
+                  <h4 class="card-title">Volvo FMX</h4>
+                  <p class="card-text">
+                    <b>Nuestro camión de construcción más resistente</b><br />
+                    El Volvo FMX es un camión de construcción robusto, repleto de tecnología que facilita las tareas más
+                    exigentes. Personalizado para carreteras con malas condiciones.
+                  </p>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <img src="../assets/volvo-fm.png" class="card-img rounded-0" alt="Volvo FM" />
+                <div class="card-body">
+                  <h4 class="card-title">Volvo FM</h4>
+                  <p class="card-text">
+                    <b>El especialista flexible</b><br />
+                    Mejore su jornada laboral con el camión que va en serio. Flexible y fácil de adaptar a cualquier
+                    tarea. En ciudades concurridas o en rutas largas.
+                  </p>
+                  <a class="button outline-dark" href="./contacto.html">Conoce más</a>
                 </div>
               </div>
             </div>
@@ -119,5 +214,10 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

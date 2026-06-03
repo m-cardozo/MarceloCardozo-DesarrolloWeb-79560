@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,27 +27,143 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
   <body>
     <header>
-      <nav>
-        <a id="logo" href="../index.html">
-          <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
-        </a>
-        <ul>
-          <li><a href="../pages/camiones.html">Camiones</a></li>
-          <li><a href="../pages/nosotros.html">Sobre nosotros</a></li>
-          <li><a href="../pages/noticias.html">Noticias</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container-fluid p-0">
+          <a id="logo" class="navbar-brand" href="../index.html">
+            <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
+          </a>
+
+          <button
+            id="btnMobileMenu"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <a class="offcanvas-brand" href="../index.html">
+                <img src="../assets/logo.svg" alt="Logo de Volvo Trucks" />
+              </a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body justify-content-end">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="./camiones.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Camiones
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH16 Aero</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH Aero</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH16</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FH</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FMX</a>
+                    <a class="dropdown-item" href="./camiones.html">Volvo FM</a>
+                  </div>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
+    <main id="about">
       <section>
-        <h1>Nosotros</h1>
+        <img src="../assets/imagen-1.png" alt="Portada de Volvo Trucks" data-aos="fade-in" data-aos-duration="1000" />
+
+        <div class="container mt-5 mb-5">
+          <h1 class="text-center" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+            Un siglo impulsando el progreso
+          </h1>
+          <p class="text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            El primer camión Volvo se creó en 1928. Desde entonces, hemos crecido para convertirnos en el mayor
+            productor de camiones de gran tonelaje en Europa. En la actualidad, estamos comprometidos a impulsar el
+            progreso y dar forma al futuro panorama de los transportes sostenibles. Nuestra base son nuestros valores
+            fundamentales: calidad, seguridad y cuidado del medio ambiente. Los aplicamos a todo lo que hacemos.
+          </p>
+
+          <div class="row g-3 g-lg-5 mt-5">
+            <div class="col-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1500">
+              <img src="../assets/volvo-old.png" class="card-img rounded-0" alt="Volvo en la antiguedad" />
+            </div>
+
+            <div class="col-8" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1500">
+              <img src="../assets/volvo-new.png" class="card-img rounded-0" alt="Volvo en la actualidad" />
+            </div>
+          </div>
+
+          <div class="row g-3 g-lg-5 mt-5">
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Calidad</h4>
+                  <p class="card-text">
+                    Nuestro compromiso con la calidad es un constante esfuerzo para ir más allá de lo previsto y no
+                    dejar nada al azar. Para ofrecer productos y servicios en los que pueda confiar, con más tiempo de
+                    actividad y mejores resultados.
+                  </p>
+                  <a class="link" href="../pages/contacto.html">Leer más sobre calidad</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Seguridad</h4>
+                  <p class="card-text">
+                    Gracias a un sinfín de innovaciones en materia de seguridad, evitamos los accidentes de tráfico y
+                    reducimos las lesiones. Nuestra visión es cero accidentes, y trabajamos incansablemente para
+                    garantizar una mayor seguridad vial para todos.
+                  </p>
+                  <a class="link" href="../pages/contacto.html">Leer más sobre seguridad</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1500">
+              <div class="card border-0 h-100">
+                <div class="card-body">
+                  <h4 class="card-title">Medio ambiente</h4>
+                  <p class="card-text">
+                    Con la visión de llegar a cero emisiones, aspiramos a una industria del transporte más sostenible.
+                    Tomar la delantera en electrificación es uno de nuestros principales empeños.
+                  </p>
+                  <a class="link" href="../pages/contacto.html">Leer más sobre medio ambiente</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -58,5 +176,10 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

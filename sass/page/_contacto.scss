@@ -1,0 +1,28 @@
+@use '../general/variables' as *;
+
+form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  background-color: $color-light;
+
+  label {
+    font-weight: 400;
+  }
+
+  input::placeholder {
+    color: $color-gray !important;
+    font-weight: 300;
+  }
+
+  textarea {
+    resize: none;
+
+    @extend input;
+  }
+
+  @include maxMobile {
+    padding: 2rem;
+  }
+}
