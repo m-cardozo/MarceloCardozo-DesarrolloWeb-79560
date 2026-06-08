@@ -6,6 +6,33 @@ footer {
   text-align: center;
   padding: 20px 10px;
 
+  .brand {
+    display: block;
+    margin: 1.5rem auto !important;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  .nav {
+    a {
+      color: $color-dark;
+
+      &:hover {
+        color: $color-gray;
+      }
+
+      &.active {
+        font-weight: 500;
+      }
+    }
+
+    @include maxMobile {
+      flex-direction: column;
+    }
+  }
+
   p {
     font-size: 0.85rem;
     margin: 0;

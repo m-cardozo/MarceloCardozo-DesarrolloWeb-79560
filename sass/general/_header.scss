@@ -10,6 +10,11 @@ header {
 
     #logo {
       width: 120px;
+      transition: all 0.5s ease;
+
+      &hover {
+        transform: scale(1.1);
+      }
     }
 
     .nav-item {
@@ -83,11 +88,11 @@ header {
           padding: 0.25rem 0 !important;
         }
       }
+    }
 
-      &.active {
-        .nav-link {
-          font-weight: 500;
-        }
+    .active {
+      .nav-link {
+        font-weight: 500;
       }
     }
 

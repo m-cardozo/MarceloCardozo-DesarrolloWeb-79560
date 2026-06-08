@@ -243,6 +243,10 @@ header nav {
 }
 header nav #logo {
   width: 120px;
+  transition: all 0.5s ease;
+}
+header nav #logohover {
+  transform: scale(1.1);
 }
 header nav .nav-item {
   position: relative;
@@ -305,7 +309,7 @@ header nav .nav-item .dropdown-item.active {
     padding: 0.25rem 0 !important;
   }
 }
-header nav .nav-item.active .nav-link, header nav .nav-item.active .dropdown-item {
+header nav .active .nav-link, header nav .active .nav-item .dropdown-item, header nav .nav-item .active .dropdown-item {
   font-weight: 500;
 }
 header nav .offcanvas-brand {
@@ -321,6 +325,27 @@ footer {
   color: #333;
   text-align: center;
   padding: 20px 10px;
+}
+footer .brand {
+  display: block;
+  margin: 1.5rem auto !important;
+}
+footer .brand img {
+  width: 150px;
+}
+footer .nav a {
+  color: #333;
+}
+footer .nav a:hover {
+  color: #999;
+}
+footer .nav a.active {
+  font-weight: 500;
+}
+@media (max-width: 479px) {
+  footer .nav {
+    flex-direction: column;
+  }
 }
 footer p {
   font-size: 0.85rem;
